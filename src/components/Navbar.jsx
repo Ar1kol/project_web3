@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HiMenuAlt4 } from "react-icons/hi";
+import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import logo from "../images/logo.png";
 import NavbarItem from "./NavbarItem";
@@ -22,18 +22,17 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="flex relative">
-        {!toggleMenu && (
-          <HiMenuAlt4
-            fontSize={28}
-            className="text-white md:hidden cursor-pointer"
-            onClick={() => setToggleMenu(true)}
-          />
-        )}
-        {toggleMenu && (
+        {toggleMenu ? (
           <AiOutlineClose
             fontSize={28}
             className="text-white md:hidden cursor-pointer"
             onClick={() => setToggleMenu(false)}
+          />
+        ) : (
+          <HiMenu
+            fontSize={28}
+            className="text-white md:hidden cursor-pointer"
+            onClick={() => setToggleMenu(true)}
           />
         )}
         {toggleMenu && (
@@ -48,7 +47,7 @@ const Navbar = () => {
               <NavbarItem
                 key={item + index}
                 title={item}
-                classprops="my-2 text-lg"
+                classProps="my-2 text-lg"
               />
             ))}
           </ul>
