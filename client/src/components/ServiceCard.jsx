@@ -1,9 +1,11 @@
 import React from "react";
 
-const ServiceCard = ({color, title, icon, subtitle}) => {
+const ServiceCard = ({ color, title, icon, subtitle }) => {
   return (
     <div className="flex flex-row justify-start items-center white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">
-      <div className={`w-10 h-10 rounded-full flex justify-center items-center ${color}`}>
+      <div
+        className={`w-10 h-10 rounded-full flex justify-center items-center ${color}`}
+      >
         {icon}
       </div>
       <div className="ml-5 flex flex-col flex-1">
