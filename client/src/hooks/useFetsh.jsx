@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const API_KEY = process.env.REACT_APP__GIPHY_API;
+const API_KEY = process.env.REACT_APP_GIPHY_API;
 
 const useFetsh = ({ keyword }) => {
   const [gifUrl, setGifUrl] = useState("");
@@ -26,6 +26,7 @@ const useFetsh = ({ keyword }) => {
     if (keyword) {
       fetchGifs();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [keyword]);
 
   return gifUrl;

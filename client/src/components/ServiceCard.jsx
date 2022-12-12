@@ -1,5 +1,3 @@
-import React from "react";
-
 const ServiceCard = ({ color, title, icon, subtitle }) => {
   return (
     <div className="flex flex-row justify-start items-center white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">
